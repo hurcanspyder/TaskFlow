@@ -958,3 +958,159 @@ svg {
     transform: rotate(360deg);
   }
 }
+
+
+/* Responsive tweaks */
+
+/* Medium screens: tablets and small laptops */
+@media (max-width: 1120px) {
+  .kanban-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .board-actions {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .search-box input,
+  .filter-dropdown select {
+    min-width: 0;
+  }
+
+  .board-header {
+    padding: 1rem;
+  }
+
+  .board-title-group h2 {
+    font-size: 1.4rem;
+  }
+
+  .kanban-column {
+    min-height: 360px;
+  }
+
+  .task-card {
+    padding: 0.9rem;
+  }
+
+  .nav-container {
+    padding: 0.6rem 1rem;
+    gap: 0.5rem;
+  }
+
+  /* allow nav links to wrap and scroll horizontally on smaller widths */
+  .nav-links {
+    display: inline-flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 8px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* Small screens: phones */
+@media (max-width: 720px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .board-header {
+    padding: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .board-title-group h2 {
+    font-size: 1.25rem;
+  }
+
+  .board-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    max-width: 95%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group.half {
+    flex: none;
+    width: 100%;
+  }
+
+  .login-card {
+    max-width: 420px;
+    padding: 1.5rem;
+  }
+
+  .login-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .bug-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban-column {
+    min-height: 300px;
+  }
+}
+
+/* Extra small: narrow phones and very small viewports */
+@media (max-width: 420px) {
+  .brand-title {
+    display: none;
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .search-box input {
+    padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+  }
+
+  .column-body {
+    padding: 0.9rem;
+  }
+
+  .column-header {
+    padding: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .nav-user {
+    gap: 0.45rem;
+  }
+
+  /* Ensure modal and cards don't overflow */
+  .modal-card, .task-card, .bug-card {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
